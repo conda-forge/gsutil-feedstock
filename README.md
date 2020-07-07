@@ -5,7 +5,7 @@ Home: https://pypi.org/project/gsutil/
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A command line tool for interacting with cloud storage services.
 
