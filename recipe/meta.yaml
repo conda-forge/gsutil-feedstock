@@ -1,5 +1,5 @@
 {% set name = "gsutil" %}
-{% set version = "4.53" %}
+{% set version = "4.54" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f46de2b85260d3d2eafaa9779a4328cdc090dae3371b2f73594229cf19ffa08d
+  sha256: 4b74b7d48668c00322302b608a0c01d07ce586841d0a9694d3a7aaea84595ec5
 
 build:
   number: 0
