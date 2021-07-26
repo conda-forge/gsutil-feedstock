@@ -11,7 +11,7 @@ source:
   sha256: c5f6447b7a177ff15aaadd35578e31caa47ed4dd620dd8fb6a0351273bc6cf03
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - gsutil = gslib.__main__:main
@@ -20,23 +20,21 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
+    - python >=3.6
     - argcomplete >=1.9.4
     - crcmod >=1.7
     - fasteners >=0.14.1
-    - gcs-oauth2-boto-plugin >=2.5
-    - google-apitools >=0.5.30
+    - gcs-oauth2-boto-plugin >=2.7
+    - google-apitools >=0.5.32
     - google-reauth >=0.1.0
-    - httplib2 >=0.11.3
-    - mock =2.0.0
+    - httplib2 >=0.18
+    - mock ==2.0.0
     - monotonic >=1.4
-    - oauth2client =4.1.3
     - pyopenssl >=0.13
-    - python <4.0
     - retry_decorator >=1.0.0
     - six >=1.12.0
-    - socksipy-branch =1.01
   run_constrained:
     - google-cloud-sdk <0a
 
