@@ -31,7 +31,6 @@ requirements:
     - google-apitools >=0.5.32
     - google-reauth >=0.1.0
     - httplib2 >=0.20.4
-    - mock ==2.0.0
     - monotonic >=1.4
     - pyopenssl >=0.13
     - retry_decorator >=1.0.0
