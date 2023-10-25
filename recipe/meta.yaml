@@ -1,5 +1,5 @@
 {% set name = "gsutil" %}
-{% set version = "5.26" %}
+{% set version = "5.27" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cb18b8d2067d9a9e45c99b7614e241c173632eb66b7d3cb007979d6aee7146cf
+  sha256: 681a2d844acdf05fac989da6dd406944ae11cb27a4cf3c9edef74d2585ab5f05
 
 build:
   number: 0
@@ -34,7 +34,7 @@ requirements:
     - monotonic >=1.4
     - pyopenssl >=0.13
     - retry_decorator >=1.0.0
-    - six >=1.12.0
+    - six >=1.16.0
   run_constrained:
     - google-cloud-sdk <0a
 
