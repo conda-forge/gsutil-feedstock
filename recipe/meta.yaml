@@ -1,5 +1,5 @@
 {% set name = "gsutil" %}
-{% set version = "5.28" %}
+{% set version = "5.29" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 71370a111e1ad6f8da5e89f99f20dad7147eeeb88222ed9ac0bb6d8fe6a2135f
+  sha256: 0ba61c0ca97a592a2ed9d6eeb74b20434831bc6ceba380138103b24d2d53b921
 
 build:
   number: 0
@@ -28,7 +28,7 @@ requirements:
     - argcomplete >=1.9.4
     - crcmod >=1.7
     - fasteners >=0.14.1
-    - gcs-oauth2-boto-plugin >=3.0
+    - gcs-oauth2-boto-plugin >=3.2
     - google-apitools >=0.5.32
     - google-reauth >=0.1.0
     - httplib2 ==0.20.4
