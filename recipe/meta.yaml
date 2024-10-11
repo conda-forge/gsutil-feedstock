@@ -1,5 +1,5 @@
 {% set name = "gsutil" %}
-{% set version = "5.30" %}
+{% set version = "5.31" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ef29d47764d2a3c2436ce50c4e1827626725ba8dbfd3127b42a18641710e7d38
+  sha256: 10700acff3438a486429c47320a1c0b7298e090a6f5aa8ba9e55cc40202ee43b
 
 build:
   number: 0
@@ -21,6 +21,7 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - setuptools
   run:
     - google-auth-httplib2 >=0.2.0
     - google-auth ==2.17.0
