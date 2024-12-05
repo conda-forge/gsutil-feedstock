@@ -1,5 +1,5 @@
 {% set name = "gsutil" %}
-{% set version = "5.31" %}
+{% set version = "5.32" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 10700acff3438a486429c47320a1c0b7298e090a6f5aa8ba9e55cc40202ee43b
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 22a02d235fa850a265e772b765acf906e8e0381adde7b923f7ccafb0a855ec77
 
 build:
   number: 0
@@ -20,13 +20,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
   run:
     - google-auth-httplib2 >=0.2.0
     - google-auth ==2.17.0
-    - python >=3.6
-    - argcomplete >=1.9.4
+    - python >={{ python_min }},<3.13
+    - argcomplete >=3.5.1
     - crcmod >=1.7
     - fasteners >=0.14.1
     - gcs-oauth2-boto-plugin >=3.2
@@ -34,7 +34,7 @@ requirements:
     - google-reauth >=0.1.0
     - httplib2 ==0.20.4
     - monotonic >=1.4
-    - pyopenssl >=0.13
+    - pyopenssl >=0.13,<=24.2.1
     - retry_decorator >=1.0.0
     - six >=1.16.0
   run_constrained:
@@ -49,6 +49,7 @@ test:
     - gsutil version
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/gsutil/
