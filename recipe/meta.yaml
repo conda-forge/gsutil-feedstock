@@ -20,12 +20,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
   run:
     - google-auth-httplib2 >=0.2.0
     - google-auth ==2.17.0
-    - python >=3.6
+    - python >={{ python_min }},<3.13
     - argcomplete >=3.5.1
     - crcmod >=1.7
     - fasteners >=0.14.1
@@ -49,6 +49,7 @@ test:
     - gsutil version
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/gsutil/
