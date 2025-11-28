@@ -11,7 +11,7 @@ source:
   sha256: b6970ea6c0950c854ce2e33c591e177a6f4a657f2824a1b54eaefa2dff2576bb
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - gsutil = gslib.__main__:main
@@ -25,7 +25,7 @@ requirements:
   run:
     - google-auth-httplib2 >=0.2.0
     - google-auth ==2.39.0
-    - python >={{ python_min }},<3.13
+    - python >={{ python_min }},<3.14
     - argcomplete >=3.6.2
     - crcmod >=1.7
     - fasteners >=0.14.1
