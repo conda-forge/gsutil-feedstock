@@ -1,5 +1,5 @@
 {% set name = "gsutil" %}
-{% set version = "5.36" %}
+{% set version = "5.38" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 13360118b17732b734eaa313eb694ab43902ccb04eae75e9fe692f168396c913
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 7dae12a2fdf47ea5af1f0060793ff54d62d37bbe46d9d6a6dbcdd95c8223259c
 
 build:
   number: 0
@@ -34,7 +34,7 @@ requirements:
     - google-reauth >=0.1.0
     - httplib2 ==0.20.4
     - monotonic >=1.4
-    - pyopenssl >=0.13,<=24.2.1
+    - pyopenssl >=0.13,<=26.4.0
     - retry_decorator >=1.0.0
     - six >=1.17.0
   run_constrained:
